@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JKarp</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <img src="logo.png" alt="logo" id="logo">
-            <h1>Sklep wędkarski JKarp</h1>
-            <section>Koszyk: <div class="dispKosz">00.00 zł</div></section>
-        </header>
-        <main>
-            <form action="">
-                <p>Wybierz produkt</p>
-                <select name="" id="">
-                    <option value="">Wybierz produkt</option>
-                    <option value="przypon">Przypon Karpiowy</option>
-                    <option value="wedka">Wędka ABU GARCIA VERITAS 902M 274cm 10-32g</option>
-                    <option value="zaneta">Zanęta LORPIO Magnetic Tench Marcepan 2kg</option>
-                    <option value="zylka">Żyłka ROBINSON Supercup 150m - 0.218mm</option>
-                </select>
-                <p>Wybierz Ilość:</p>
-                <input type="number" id="ilosc"><p class="display">00.00 zł</p>
-                <button id="koszyk">Dodaj do koszyka</button>
-            </form>
-        </main>
-        <aside>
-            <img src="logo.png" alt="logo2">
-        </aside>
+      <header>
+        <img src="logo.png" alt="logo" id="logo" />
+        <h1>Sklep wędkarski JKarp</h1>
+        <section>
+          Koszyk:
+          <div class="koszykVal">00.00 zł</div>
+        </section>
+      </header>
+      <main>
+        <form action="">
+          <p>Wybierz produkt</p>
+          <select name="produkty" id="produkty">
+            <option value="">Wybierz produkt</option>
+            <option value="przypon">Przypon Karpiowy Blow Back Rig 4</option>
+            <option value="wedka">
+              Wędka ABU GARCIA VERITAS 902M 274cm 10-32g
+            </option>
+            <option value="zaneta">
+              Zanęta LORPIO Magnetic Tench Marcepan 2kg
+            </option>
+            <option value="zylka">
+              Żyłka ROBINSON Supercup 150m - 0.218mm
+            </option>
+            <option value="akumulator">
+              Akumulator Centra Plus 74Ah 680A CB740 PLUS
+            </option>
+          </select>
+          <p>Wybierz Ilość:</p>
+          <input type="number" id="ilosc" value="1" />
+          <p class="display">00.00 zł</p>
+          <button id="koszykBtn">Dodaj do koszyka</button>
+        </form>
+      </main>
+      <aside>
+        <img id="produktImg" src="logo.png" alt="Produkt" />
+        <p id="opis"></p>
+      </aside>
     </div>
-</body>
+  </body>
 </html>
