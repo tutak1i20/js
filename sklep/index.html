@@ -13,7 +13,7 @@
         <img src="logo.png" alt="logo" id="logo" />
         <h1>Sklep wędkarski JKarp</h1>
         <section>
-          Koszyk:
+          <strong>Koszyk: </strong>
           <div class="koszykVal">00.00 zł</div>
         </section>
       </header>
@@ -21,7 +21,7 @@
         <form action="">
           <p>Wybierz produkt</p>
           <select name="produkty" id="produkty">
-            <option value="">Wybierz produkt</option>
+            <option value="puste">Wybierz produkt</option>
             <option value="przypon">Przypon Karpiowy Blow Back Rig 4</option>
             <option value="wedka">
               Wędka ABU GARCIA VERITAS 902M 274cm 10-32g
@@ -37,7 +37,7 @@
             </option>
           </select>
           <p>Wybierz Ilość:</p>
-          <input type="number" id="ilosc" value="1" />
+          <input type="number" id="ilosc" min="0" max="1000"/>
           <p class="display">00.00 zł</p>
           <button id="koszykBtn">Dodaj do koszyka</button>
         </form>

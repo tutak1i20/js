@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: space-between;
   font-size: 150%;
 }
 header {
@@ -66,4 +67,10 @@ button:hover {
 #produktImg {
   width: 300px;
   height: 300px;
+}
+
+#opis{
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 70%;
 }
