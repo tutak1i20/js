@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurator wyposażenia</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="baner.jpg" alt="baner">
+        </header>
+        <aside id="lewy">
+            <form action="">
+                <hr>
+                <h2>Kolor</h2>
+                <select name="kolor" id="kolor">
+                    <option value="szary" selected>szary</option>
+                    <option value="niebieski">niebieski</option>
+                    <option value="czerwony">czerwony</option>
+                    <option value="zolty">żółty</option>
+                    <option value="zielony">zielony</option>
+                </select>
+                <hr>
+                <h2>Felgi</h2>
+                <label for="stalowe">Stalowe
+                    <input type="radio" name="felgi" id="stalowe" value="stalowe" checked>
+                </label>
+                <label for="aluminiowe">Aluminiowe
+                    <input type="radio" name="felgi" id="aluminiowe" value="aluminiowe">
+                </label>
+                <hr>
+                <h2>Doposarzenie</h2>
+                <label for="czujniki">Czujniki parkowania
+                    <input type="checkbox" name="doposarzenie" id="czujniki">
+                </label><br>
+                <label for="climatronic">Climatronic
+                    <input type="checkbox" name="doposarzenie" id="climatronic"> 
+                </label><br>
+                <label for="nawigacja">Nawigacja
+                    <input type="checkbox" name="doposarzenie" id="nawigacja"> 
+                </label>
+                <hr>
+            </form>
+        </aside>
+        <article>
+            <h1>Twoj samochód</h1>
+            <img src="szary.png" id="autoImg" alt="foto">
+            <h1>Wycena</h1>
+            <p id="cena">Cena bazowa 75000zł</p>
+            <div id="dodatki"></div>
+            <hr>
+            <h1 id="razem">RAZEM: 75000 zł</h1>
+        </article>
+        <footer>Autor strony: <i>000000000000000</i></footer>
+    </main>
+</body>
+
+
+
+
+<script>
+    const form = document.querySelector("form");
+    const carColor = document.querySelector("#kolor");
+    const carImg = document.querySelector("#autoImg");
+    const cena = document.querySelector("#cena");
+    const dodatkiDisp = document.querySelector("#dodatki");
+    const razemDisp = document.querySelector("#razem");
+
+    
+    const basePrice = 75000;
+    const colorPrice = 9000;
+    const alifelgiPrice = 7000;
+    const parkingSensorsPrice = 6500;
+    const climatronicPrice = 8500;
+    const navigationPrice = 5000;
+
+    form.addEventListener("change", updatePrice);
+
+    function updatePrice() {
+        let totalPrice = basePrice;
+        let dodatkiText = "";
+
+        if (carColor.value !== "szary") {
+            dodatkiText += `Lakier: 9000 zł <br>`
+            totalPrice += colorPrice;
+        }
+
+        const alufelgi = document.querySelector("#aluminiowe");
+        if (alufelgi.checked) {
+            dodatkiText += `Felgi aluminiowe: 7000 zł <br>`
+            totalPrice += alifelgiPrice;
+        }
+
+        const parkingSensors = document.querySelector("#czujniki");
+        const climatronic = document.querySelector("#climatronic");
+        const navigation = document.querySelector("#nawigacja");
+
+        if (parkingSensors.checked) {
+            dodatkiText += `Czujniki parkowania: 6500 zł <br>`
+            totalPrice += parkingSensorsPrice;
+        }
+        if (climatronic.checked) {
+            dodatkiText += `Climatronic: 8500 zł <br>`
+            totalPrice += climatronicPrice;
+        }
+        if (navigation.checked) {
+            dodatkiText += `Nawigacja: 5000 zł <br>`
+            totalPrice += navigationPrice;
+        }
+
+        cena.innerHTML = `Cena bazowa: 75000 zł`;
+        dodatkiDisp.innerHTML = dodatkiText;
+        razemDisp.innerHTML = `RAZEM: ${totalPrice} zł`;
+        
+        const colorVal = `${carColor.value}.png`;
+        carImg.src = colorVal;
+    }
+
+    
+
+</script>
+
+</html>
