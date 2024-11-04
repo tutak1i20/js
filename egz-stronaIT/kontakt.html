@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div class="container">
+        <div class="blokLogo">
+            <img src="logo.png" alt="firma it">
+        </div>
+        <div class="blokMenu">
+            <a href="index.html" id="index">Strona Główna</a>
+            <a href="uslugi.html">Usługi</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="blokBaner">
+            <img src="baner1.PNG" class="baner" alt="Usługi informatyczne">
+        </div>
+        <div class="blokGl">
+            <h2>Kontakt</h2>
+            <table>
+                <tr>
+                    <td>Imię: </td>
+                    <td>
+                        <input type="text" name="imie" id="imie">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nazwisko: </td>
+                    <td>
+                        <input type="text" name="nazwisko" id="nazwisko">
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-mail: </td>
+                    <td>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zgłoszenie:</td>
+                    <td>
+                        <textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label for="check">
+                            <input type="checkbox" name="check" id="check">Zapoznałam/em się z regulaminem
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="czysc">Resetuj</button>
+                        <button id="przeslij">Prześlij</button>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+        </div>
+        <div class="stopka">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    const czyscBtn = document.getElementById("czysc");
+    const przeslijBtn = document.getElementById("przeslij");
+    const imie = document.getElementById("imie");
+    const nazwisko = document.getElementById("nazwisko");
+    const email = document.getElementById("email");
+    const zgloszenie = document.getElementById("zgloszenie");
+
+    przeslijBtn.addEventListener('click', function(evt){
+        evt.preventDefault();
+        const paragraf = document.createElement("p");
+        paragraf.document.appendChild("hr");
+
+        if (condition) {
+            
+        }
+
+    })
+</script>
+
+</html>

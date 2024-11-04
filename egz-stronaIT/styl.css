@@ -1,0 +1,54 @@
+body{
+    background-color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.blokLogo{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.blokMenu{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.blokBaner{
+    background-color: #DDDDDD;
+    height: 200px;
+    width: 100%;
+}
+.baner{
+    height: 200px;
+}
+.blokGl{
+    color: navy;
+    margin: 50px;
+    height: 400px;
+}
+.stopka{
+    text-align: right;
+    background-color: lightblue;
+    padding: 10px;
+    width: 100%;
+}
+a{
+    color: navy;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+#index:hover{
+    border: solid, 1px, navy;
+}
